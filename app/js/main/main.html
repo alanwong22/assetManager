@@ -1,0 +1,97 @@
+<div class="main-container">
+
+	<div class="main-header">
+		<div class="title">Manage Player Assets</div>
+	</div>
+
+	<div class="main-nav col-xs-12 col-sm-3">
+		<div class="nav-item">
+			<div class="blue-btn" upload-asset>
+				<div class="material-icon plus">
+					<span class="first"></span>
+					<span class="second"></span>
+					<span class="third"></span>
+					<span class="fourth"></span>
+				</div>
+				<span class="upload-copy">new image</span>
+			</div>
+		</div>
+		<div class="nav-item">skins</div>
+		<div class="nav-item">logos</div>
+		<div class="nav-item active">screens</div>
+	</div>
+
+	<div class="main-content col-xs-12 col-sm-9">
+		<div class="content-info">
+			<div class="content-count col-sm-6 col-md-7">{{main.assetList.length}} Images</div>
+			<div class="content-search col-sm-6 col-md-5">
+				<div class="form-group">
+			    <input type="text" class="form-control" placeholder="Search">
+			  </div>
+			</div>
+		</div>
+
+		<div class="content-headers">
+			<div class="file-name col-xs-12 col-sm-6 col-md-7">Name</div>
+			<div class="file-options col-sm-6 col-md-5">
+				<div class="file-option">Preview <img  class="question" src="images/question.png"></div>
+				<div class="file-option">Re-Upload</div>
+				<div class="file-option">Delete</div>
+			</div>
+		</div>
+
+		<div class="content-list-wrapper">
+			<div class="content-list" ng-repeat="item in main.assetList | limitTo:main.listMax">
+				<div class="file-name col-sm-6 col-md-7">{{item.filename}}</div>
+
+				<div class="file-options col-sm-6 col-md-5">
+					<div class="file-option"><img class="preview" src="images/{{item.image}}"></div>
+					<div class="file-option"><img class="clickable"src="images/upload.png"></div>
+					<div class="file-option">
+						<div class="btn-container">
+							<img id="{{$index}}" class="clickable" delete-asset src="images/delete.png">
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="content-list-footer container">
+			<div class="per-page">Results Per Page:
+				<div class="dropdown" per-page>
+				  <a id="dLabel" data-target="#" href="http://example.com" data-toggle="dropdown" aria-haspopup="true" role="button" aria-expanded="false">
+				    <span id="curLimit">{{main.listMax}}</span>
+				    <img class="carat" src="images/arrow-down-black.png">
+				  </a>
+
+				  <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+				  	<li>10</li>
+						<li>25</li>
+						<li>50</li>
+				  </ul>
+				</div>
+			</div>
+
+			<nav>
+			  <ul class="pagination">
+			    <li>
+			      <a href="#" aria-label="Previous">
+			        <span aria-hidden="true"><img class="carat" src="images/arrow-left-black.png"> PREV</span>
+			      </a>
+			    </li>
+			    <li><a href="#">1</a></li>
+			    <li><a href="#">2</a></li>
+			    <li><a href="#">3</a></li>
+			    <li><a href="#">4</a></li>
+			    <li><a href="#">5</a></li>
+			    <li>
+			      <a href="#" aria-label="Next">
+			        <span aria-hidden="true">NEXT <img class="carat" src="images/arrow-right-black.png"></span>
+			      </a>
+			    </li>
+			  </ul>
+			</nav>
+
+		</div>
+
+</div>

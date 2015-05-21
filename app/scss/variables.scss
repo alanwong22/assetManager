@@ -1,0 +1,60 @@
+$border-color: #dcdee3;
+$copy-color: #000000;
+$blue: #1397ee;
+$blueish: #97a0b3;
+$yellow : #ffd201;
+
+/*  BOOTSTRAP OVERRIDES   */
+.form-group {
+  margin:	0px;
+}
+
+.form-control {
+	height: 40px;
+  padding: 10px 12px 9px;
+	border: 1px solid #c6cfe0;
+}
+
+nav {
+  height: 40px;
+	.pagination {
+		height: 100%;
+		float: right;
+		margin: 0px;
+	  border-radius: 0px;
+	  li {
+	  	height: 100%;
+	  	a {
+	  		height: 100%;
+	  		border-top: none;
+	  		border-bottom: none;
+	  		border-right: none;
+  		  padding: 3px 18px;
+  		  line-height: 36px;
+		    color: #000;
+	      font-size: 11px;
+			  font-weight: 400;
+	  	}
+
+	  	&:first-child a {
+	  	  padding: 4px 15px 4px 11px;
+	  	};
+	  	&:last-child a {
+	  	  padding: 4px 10px 4px 15px;
+	  	};
+	  }
+	}
+}
+
+.pagination>li:first-child>a,
+.pagination>li:first-child>span,
+.pagination>li:last-child>a, 
+.pagination>li:last-child>span {
+	border-radius: 0px;
+	line-height: 34px;
+	img {
+	  position: relative;
+	  top: -1px;
+	  padding: 2px;
+	}
+}
